@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h3>UPDATE CUSTOMER</h3>
+
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit" class="btn btn-success">UPDATE</button>
+    <a href="{% url 'about' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}
